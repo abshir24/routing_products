@@ -1,0 +1,12 @@
+<table>
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let product of products; let idx = index">
+    <td>{{product.title}}</td>
+    <td>{{product.price}}</td>
+    <td><a [routerLink]="['/edit',idx]"><button>Edit</button></a></td>
+    <td><button (click)="delete(product)">New Page</button></td>
+  </tr>
+</table>
